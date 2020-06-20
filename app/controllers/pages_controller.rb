@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @user = current_user
-    @development_cards = DevelopmentCard.deck 
+    @development_cards = DevelopmentCard.deck
   end
 
   def get_random
@@ -13,5 +13,7 @@ class PagesController < ApplicationController
     redirect_to root_path
   end
 
-  
+  def show
+    @card = DevelopmentCard.find(params[:id])
+  end
 end

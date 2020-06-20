@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 2020_06_20_132747) do
 
   create_table "development_cards", force: :cascade do |t|
     t.string "name"
-    t.string "front_img"
-    t.string "back_img"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

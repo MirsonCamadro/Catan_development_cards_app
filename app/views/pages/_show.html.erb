@@ -1,0 +1,13 @@
+
+                    <% if @card.start_with?('k')%>
+                        <%= image_tag("caballero.jpeg")%>
+                    <% elsif @card.start_with?('m')  %>
+                        <%= image_tag("monopolio.jpeg") %>
+                    <% elsif @card.start_with?('i')  %>
+                        <%= image_tag("invento.jpeg") %>
+                    <% elsif @card.start_with?('p')  %>
+                        <%= image_tag("puntovictoria.jpeg") %>
+                    <% elsif @card.start_with?('c')  %>
+                        <%= image_tag("carreteras.jpeg") %>
+                    <% end %>
+           

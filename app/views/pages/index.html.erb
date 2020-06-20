@@ -1,11 +1,48 @@
 <div class="container">
     <div class="row">
-        <p>mazo: <%= @development_cards %>
+        <div class="col deck">
+            <p>mazo: <%= @development_cards %>
+        </div>
     </div>
     <div class="row">
-        <%= link_to "repartir", pages_get_random_path, class:"btn btn-success" %>
+        <div class="col get-button">
+            <%= link_to "repartir", pages_get_random_path, class:"btn btn-success" %>
+        </div>
     </div>
-    <div class="row">
-        mano: <%= @user.hand %>
+</div>
+<div class="container-fluid hands">
+    <div class="row player-hand"">
+        <% @user.hand.each do |card| %>
+            <div class="col-3">
+                <div class="card card-image">
+                    <% if card.start_with?('k')%>
+                        <%= image_tag("caballero.webp")%>
+                    <% elsif card.start_with?('m')  %>
+                        <%= image_tag("monopolio.webp") %>
+                    <% elsif card.start_with?('i')  %>
+                        <%= image_tag("invento.webp") %>
+                    <% elsif card.start_with?('p')  %>
+                        <%= image_tag("puntovictoria.webp") %>
+                    <% elsif card.start_with?('c')  %>
+                        <%= image_tag("carreteras.webp") %>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
     </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
