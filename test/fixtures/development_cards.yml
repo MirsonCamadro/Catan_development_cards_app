@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  hand: 
+  name: MyString
+  front_img: MyString
+  back_img: MyString
   user: one
 
 two:
-  hand: 
+  name: MyString
+  front_img: MyString
+  back_img: MyString
   user: two
