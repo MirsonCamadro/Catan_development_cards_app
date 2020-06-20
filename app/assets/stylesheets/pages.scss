@@ -5,7 +5,13 @@
 //login
 
 body{
-    background-color: #8F2827;
+    background-image: url("catan-background.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    height: auto;
+    background-color: #96353A;
+    
 }
 /* formulario login */
 .login {
@@ -74,17 +80,16 @@ body{
   //-----index body ----------- //
   .deck{
     height: 500px;
-    background-color: red;
+
   }
 
   .get-button{
     height: 10%;
-    background-color: green;
+
   }
 
   .player-hand{
     height: 500px;
 
-    background-color: blue;
   }
 

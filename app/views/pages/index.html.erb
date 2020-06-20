@@ -1,19 +1,17 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col deck">
-            <p>mazo: <%= @development_cards %>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col get-button">
-            <%= link_to "repartir", pages_get_random_path, class:"btn btn-success" %>
+        <div class="mx-auto deck">
+            <%# mazo: <%= @development_cards %> 
+            <%= link_to pages_get_random_path do %>
+                <%= image_tag("deck.jpeg", size:"400x500")%>
+            <% end %>
         </div>
     </div>
 </div>
 <div class="container-fluid hands">
     <div class="row player-hand"">
         <% @user.hand.each do |card| %>
-            <div class="col-3">
+            <div class="col-10 my-5 mx-auto">
                 <div class="card card-image">
                     <% if card.start_with?('k')%>
                         <%= image_tag("caballero.webp")%>
